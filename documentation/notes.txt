@@ -1,0 +1,81 @@
+
+Core Components:
+
+Web Server 
+Scheduler
+Metastore, any database
+Triggerer
+
+Executor,
+it has two aditional components:
+Queue and Worker,
+
+
+Directed Acyclic Graph
+DAG:
+
+"No Cycles"
+
+A DAG is a data pipeline, an Operator is a task.
+
+An Executor defines how your tasks are execute whereas a worker is a process executing your task
+
+The scheduler schedules your tasks, the web server serves the UI, the database stores the metadata of Airflow.
+
+airflow db init is the first command to execute to initialise Airflow
+
+If a task fails, check the logs by clicking on the task from the UI and "Logs"
+
+The Gantt view is super useful to sport bottlenecks and tasks are too long to execute
+
+
+
+localhost:8080
+
+Operators:
+
+python
+bash
+Sensor
+
+task/task instance
+
+workflow is a combination of concepts
+
+Architectures:
+
+Single Node:
+
+Multi Node:
+
+DAG-Scheduler-Executor
+
+3 types of Operator
+Actional Operator: Execute an actional
+Transfer Operators: Transfer Data
+Sensors: Wait for a condition to be met
+
+Air Flow Core: 
+
+pip install apache-airflow
+
+you can also install for example pip install apache-airflow-providers-amazon
+
+
+ACCES AIRFLOW CLI
+Test dags: 
+Enter Docker CLI:
+docker exec -i -t materials-airflow-scheduler-1 /bin/bash
+
+TASK TEST: 
+
+airflow tasks test user_processing create_table 2022-08-24
+
+
+
+
+
+
+
+
+
